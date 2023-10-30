@@ -1,0 +1,94 @@
+The AOS (Animate On Scroll) library offers a variety of built-in animations. Here's a list of AOS animations you can use by simply setting the data-aos attribute:
+
+Fading animations:
+fade
+fade-up
+fade-down
+fade-left
+fade-right
+fade-up-right
+fade-up-left
+fade-down-right
+fade-down-left
+Flipping animations:
+flip-up
+flip-down
+flip-left
+flip-right
+Sliding animations:
+slide-up
+slide-down
+slide-left
+slide-right
+Zooming animations:
+zoom-in
+zoom-in-up
+zoom-in-down
+zoom-in-left
+zoom-in-right
+zoom-out
+zoom-out-up
+zoom-out-down
+zoom-out-left
+zoom-out-right
+
+You can apply any of these animations by setting the data-aos attribute on an element. For instance:
+<div data-aos="zoom-in-left">
+  This content will zoom in from the left when it comes into view!
+</div>
+
+To tweak the animation's behavior, you can use additional data-aos-* attributes:
+Duration: data-aos-duration="1000" (time in milliseconds)
+Easing: data-aos-easing="ease-in-out"
+Delay: data-aos-delay="300" (time in milliseconds)
+Offset: data-aos-offset="50" (in pixels, dictates at which point the animation triggers)
+
+Example:
+<div data-aos="slide-up" data-aos-duration="1500" data-aos-delay="200">
+  This content will slide up over 1.5 seconds, with a delay of 200ms!
+</div>
+
+To see all available animations and their visual demonstrations, you can refer to the AOS library's official demo page or documentation.
+
+ANCHOR PLACEMENT:
+Anchor placement is one of the key concepts that allows you to fine-tune when AOS animations are triggered during scrolling. The idea is based on a combination of two settings: data-aos-anchor-placement and data-aos-offset.
+
+
+Anchor Element:
+By default, the element that you want to animate is the "anchor". This means the animation trigger depends on when this element enters or exits the viewport.
+Optionally, you can specify a different element as the anchor using data-aos-anchor. This allows another element's position to determine when the animation is triggered.
+Anchor Placement:
+
+This setting determines which part of the anchor element (either the element itself or another element specified using data-aos-anchor) should be used in conjunction with the offset to trigger the animation.
+It's defined as a combination of two values: one for the anchor element and one for the viewport. They can be top, center, or bottom.
+The format is anchor-viewport.
+Examples:
+
+top-bottom: This is the default. It means the animation will be triggered when the top of the anchor element reaches the bottom of the viewport.
+center-center: The animation will be triggered when the center of the anchor element is at the center of the viewport.
+bottom-top: The animation will be triggered when the bottom of the anchor element reaches the top of the viewport.
+... and so on for other combinations.
+
+Offset:
+This setting, defined by data-aos-offset, allows you to adjust the trigger point by a specified number of pixels.
+It can be positive (pushing the trigger point further down) or negative (pulling the trigger point up).
+By default, the offset is 120 pixels.
+For a practical example, let's consider the following:
+
+<div data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-offset="50">
+  This content will fade up when its center is 50 pixels above the center of the viewport.
+</div>
+In this case, when the center of the <div> is 50 pixels above the center of the viewport, the fade-up animation will be triggered.
+
+
+SETTINGS FOR ENTIRE PAGE: 
+<script>
+    AOS.init({
+        offset: 40,    // offset (in px) from the original trigger point
+        delay: 1,       // values from 0 to 3000, with step 50ms
+        duration: 800,  // values from 0 to 3000, with step 50ms
+        easing: 'ease', // default easing for AOS animations
+        once: false,    // whether animation should happen only once
+    });
+
+</script>
