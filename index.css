@@ -181,6 +181,8 @@
     overflow-x: hidden;
     background: var(--darkGray);
     scroll-behavior: smooth;
+    scrollbar-width: "thin";
+    scrollbar-color: "purple";
   }
 
   body {
@@ -199,6 +201,37 @@
     justify-content: center;
     align-items: center;
   }
+
+  /* For Chrome, Safari, and newer versions of Edge */
+  body::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: var(--darkGray);
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--skyBlue);
+    border-radius: 8px;
+    min-height: 50px;
+    max-height: 150px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  body:hover::-webkit-scrollbar-thumb {
+    background-color: var(--skyBlue);
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* For Firefox */
+  body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--skyBlue);
+  }
+
+  body:hover {
+    scrollbar-color: var(--skyBlue);
+  }
+
   a {
     text-decoration: none;
     color: var(--vibrantPink);
@@ -253,9 +286,8 @@
     align-items: center;
     gap: var(--sm);
     padding: var(--xs);
+    padding-bottom: 7vh;
     position: relative;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
     overflow: hidden;
   }
 
@@ -296,11 +328,12 @@
   }
 
   .heading {
-    font-size: var(--xxxl);
+    font-size: 4vh;
     font-weight: 500;
     font-family: "Comme", sans-serif;
     color: var(--lightGray);
     text-shadow: var(--largeTextShadow);
+    padding-top: var(--lg);
   }
 
   .example {
@@ -332,7 +365,7 @@
   .example img {
     width: 50vw;
     height: auto;
-    border-radius: var(--xxs);
+    border-radius: var(--sm);
     box-shadow: var(--largeShadow);
     margin-bottom: var(--xxl);
   }
@@ -434,6 +467,9 @@
 /* ......................... MEDIA QUERIES .......................... */
 
 @media (min-width: 600px) {
+  .heading {
+    font-size: 5vh;
+  }
   .example img {
     width: 45vw;
     height: 45vw;
@@ -445,6 +481,11 @@
     width: 80vw;
     height: 80vh;
   }
+
+  .heading {
+    font-size: 6vh;
+  }
+
   .example {
     width: 80vw;
   }
