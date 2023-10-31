@@ -10,16 +10,19 @@ fade-up-right
 fade-up-left
 fade-down-right
 fade-down-left
+
 Flipping animations:
 flip-up
 flip-down
 flip-left
 flip-right
+
 Sliding animations:
 slide-up
 slide-down
 slide-left
 slide-right
+
 Zooming animations:
 zoom-in
 zoom-in-up
