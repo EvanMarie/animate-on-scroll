@@ -16,13 +16,60 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comme:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="./animate-on-scroll.js"></script>
 </head>
 
 <body>
-    <div class="entire-page-container">
+    <div class="icon-bar">
+        <div class="icon">
+            <a href="#home">
+                <span class="material-symbols-outlined" style="font-size: 4vh">
+                    home
+                </span>
+            </a>
+        </div>
+        <div class="icon">
+            <a href="#fade">
+                <span class="material-symbols-outlined" style="font-size: 4vh">
+                    visibility
+                </span>
+            </a>
+        </div>
+        <div class="icon">
+            <a href="#flip">
+                <span class="material-symbols-outlined" style="font-size: 4vh">
+                    flip_camera_android
+                </span>
+            </a>
+        </div>
+        <div class="icon">
+            <a href="#zoom">
+                <span class="material-symbols-outlined" style="font-size: 4vh">
+                    zoom_in
+                </span>
+            </a>
+        </div>
+
+        <div class="icon">
+            <a href="#attributes">
+                <span class="material-symbols-outlined" style="font-size: 4vh">
+                    settings
+                </span>
+            </a>
+        </div>
+        <div class="icon">
+            <a href="#anchor">
+                <span class="material-symbols-outlined" style="font-size: 4vh">
+                    tune
+                </span>
+            </a>
+        </div>
+    </div>
+    <div id="home" class="entire-page-container">
         <div class="heroContainer">
             <div class="VStack" style="gap: var(--xxl); height: 100%; justify-content: space-between;">
                 <img src="./resources/emojiSmiley.png" alt="" class="image top-right" data-aos="fade-right"
@@ -49,7 +96,7 @@
             </div>
         </div>
     </div>
-    <div class="VStack" style="padding-bottom: 5vh; gap: var(--xl);">
+    <div class="VStack" style="padding-bottom: 8vh; gap: var(--xl);">
         <div class="VStack" id="fade">
             <div class="heading">Fade Animations</div>
             <div class="example">
@@ -130,8 +177,9 @@
             </div>
         </div>
 
+
         <div class="VStack">
-            <div class="heading" id="flip">Zoom Animations</div>
+            <div class="heading" id="zoom">Zoom Animations</div>
             <div class="example">
                 <p>data-aos="zoom-in"</p>
                 <div data-aos="zoom-in">
@@ -197,20 +245,173 @@
 
         </div>
 
+        <div class="VStack" id="attributes">
+            <div class="heading">Attributes & Properties</div>
+            <div class="example properties">
+                <p style="padding: 5px 10px">data-aos-easing</p>
+                <div class="text-section">This attribute determines the speed curve of the animation effect. Easing
+                    functions specify the rate of change of a
+                    parameter over time and can be used to make the animations feel more natural. These functions are
+                    essentially mathematical formulas that dictate how fast the animation progresses at
+                    each point.</div>
+                <ul>
+                    <li><span class="option"><span class="blue-text">linear</span> - The animation has the same speed
+                            from start to end</span></li>
+
+                    <li><span class="option"><span class="blue-text">ease</span> - Default. It starts slow, becomes
+                            faster in the middle
+                            of the
+                            animation, and becomes slow again at the end.</span></li>
+                    <li><span class="option"><span class="blue-text">ease-in</span> - Starts slowly.</span></li>
+                    <li><span class="option"><span class="blue-text">ease-out</span> - Ends slowly.</span></li>
+                    <li><span class="option"><span class="blue-text">ease-in-out</span> - Starts and ends slowly, faster
+                            in
+                            between.</span></li>
+                    <li><span class="option"><span class="blue-text">ease-in-back </span>- Starts backwards and then
+                            animates with
+                            ease-in.</span></li>
+                    <li><span class="option"><span class="blue-text">ease-out-back</span> - Starts at a steady speed,
+                            then animates with
+                            ease-out
+                            backwards.</span></li>
+                    <li><span class="option"><span class="blue-text">ease-in-out-back</span> - Starts backwards,
+                            animates with
+                            ease-in-out, and ends
+                            backwards.</span></li>
+                    <li><span class="option"><span class="blue-text">ease-in-sine, ease-out-sine, ease-in-out-sine
+                            </span>- Sine curve
+                            based easing
+                            functions.</span></li>
+                    <li><span class="option"><span class="blue-text">ease-in-quad, ease-out-quad,
+                                ease-in-out-quad</span> - Quadratic
+                            curve based
+                            easing
+                            functions.</span></li>
+                    <li><span class="option"><span class="blue-text">ease-in-cubic, ease-out-cubic,
+                                ease-in-out-cubic</span> - Cubic curve
+                            based easing
+                            functions.</span></li>
+
+                </ul>
+            </div>
+            <div class="example properties">
+                <p style="padding: 5px 10px">data-aos-duration</p>
+                <div class="text-section">This attribute determines how long, in milliseconds, the animation effect
+                    should last. Values can be Any positive integer (in milliseconds). E.g., 1000 would make the
+                    animation last 1 second.</div>
 
 
+            </div>
+            <div class="example properties">
+                <p style="padding: 5px 10px">data-aos-offset</p>
+                <div class="text-section">This attribute controls the position where the animation should start. It's
+                    defined as a distance, in pixels, from the
+                    original trigger point (typically when the element first enters the viewport).</div>
+                <ul>
+                    <li><span class="option"><span class="blue-text">Positive integer</span> - The animation will start
+                            after the element is already inside the viewport by the specified amount of pixels.</span>
+                    </li>
+                    <li><span class="option"><span class="blue-text">Negative integer</span> - The animation will start
+                            before the element enters the viewport by the specified amount of pixels. Useful if you want
+                            an
+                            animation to start before the element is seen.</span></li>
+                </ul>
+            </div>
+            <div class="example properties">
+                <p style="padding: 5px 10px">data-aos-delay</p>
+                <div class="text-section">This attribute adds a delay, in milliseconds, before the animation starts,
+                    once the trigger condition (like entering the
+                    viewport) is met. Values can be Any non-negative integer (in milliseconds). E.g., 500 would add a
+                    half-second delay before the animation starts after
+                    the element enters the viewport.</div>
+            </div>
+            <div class="example properties">
+                <p style="padding: 5px 10px">Example</p>
+                <div class="code-example">
+                    <code>data-aos="fade-up" </code>
+                    <code>data-aos-easing="ease-out-cubic" </code><code>sedata-aos-duration="1000"</code>
+                    <code>data-aos-offt="200"</code>
+                    <code>data-aos-delay="500"</code>
+                </div>
+                <div class="text-section">
+                    Content in a div with these specifications will fade up, starting 200 pixels after it
+                    enters the viewport, with an additional
+                    delay of
+                    500ms, and
+                    the animation will last 1 second with an ease-out-cubic easing.
+                </div>
+            </div>
 
+            </code>
+        </div>
+
+        <div class="VStack" id="anchor">
+            <div class="heading" id="flip">Anchor Placement</div>
+            <div class="example properties">
+
+                <p style="padding: 5px 10px">Anchor Element</p>
+                <div class="text-section">By default, the element that you want to animate is the "anchor". This means
+                    the animation trigger depends on when this
+                    element enters or exits the viewport.
+                    Optionally, you can specify a different element as the anchor using data-aos-anchor. This allows
+                    another element's
+                    position to determine when the animation is triggered.</div>
+                <p style="padding: 5px 10px">Anchor Placement: ata-aos-anchor-placement</p>
+                <div class="text-section">This setting determines which part of the anchor element (either the element
+                    itself or another element specified using
+                    data-aos-anchor) should be used in conjunction with the offset to trigger the animation.
+                    It's defined as a combination of two values: one for the anchor element and one for the viewport.
+                    They can be top,
+                    center, or bottom.
+                    The format is anchor-viewport.</div>
+
+                <ul>
+                    <li>
+                        <span class="option"><span class="blue-text">top-bottom</span> - This is the default. It means
+                            the animation will be triggered when the top of the anchor element reaches the bottom of
+                            the viewport.</span>
+                    </li>
+                    <li>
+                        <span class="option"><span class="blue-text">top-center</span> - Animation triggers when the top
+                            of the viewport meets the center of the element.</span>
+                    </li>
+                    <li>
+                        <span class="option"><span class="blue-text">top-top</span> - Animation triggers when the top of
+                            the viewport meets the top of the element.</span>
+                    </li>
+                    <li>
+                        <span class="option"><span class="blue-text">center-center</span> - The animation will be
+                            triggered when the center of the anchor element is at the center of the viewport.</span>
+                    </li>
+                    <li>
+                        <span class="option"><span class="blue-text">bottom-top</span> - The animation will be triggered
+                            when the bottom of the anchor element reaches the top of the viewport.</span>
+                    </li>
+                    <li>
+                        <span class="option"><span class="blue-text">bottom-center</span> - The animation will be
+                            triggered when the bottom of the anchor element reaches the center of the viewport.</span>
+                    </li>
+                    <li>
+                        <span class="option"><span class="blue-text">bottom-bottom</span> - The animation will be
+                            triggered when the bottom of the anchor element reaches the bottom of the viewport.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
 
 </body>
 <script>
     AOS.init({
-        offset: 333,    // offset (in px) from the original trigger point
-        delay: 2,       // values from 0 to 3000, with step 50ms
+        offset: 222,    // offset (in px) from the original trigger point
+        delay: 1.3,       // values from 0 to 3000, with step 50ms
         duration: 800,  // values from 0 to 3000, with step 50ms
         easing: 'ease', // default easing for AOS animations
         once: false,    // whether animation should happen only once
     });
 
 </script>
+
 
 </html>
