@@ -38,6 +38,12 @@
   --skyBlue75: rgba(148, 208, 255, 0.75);
   --skyBlue90: rgba(148, 208, 255, 0.9);
 
+  /* Dark Gray */
+  --darkGray25: rgba(51, 63, 76, 0.25);
+  --darkGray50: rgba(51, 63, 76, 0.5);
+  --darkGray75: rgba(51, 63, 76, 0.75);
+  --darkGray90: rgba(51, 63, 76, 0.9);
+
   /* Gradients */
   --vibrantPurpleGrad: linear-gradient(
     90deg,
@@ -68,6 +74,21 @@
     90deg,
     var(--vibrantPink50) 0%,
     var(--lavenderPurple75) 100%
+  );
+  --pinkGrayGrad: linear-gradient(
+    90deg,
+    var(--lavenderPurple50) 0%,
+    var(--vibrantPink50) 25%,
+    var(--skyBlue50) 50%,
+    var(--lightPurple50) 75%,
+    var(--lavenderPurple50) 100%
+  );
+  --darkGraysGrad: linear-gradient(
+    90deg,
+    var(--darkGray) 0%,
+    var(--darkGrad90) 25%,
+    var(--darkGray90) 75%,
+    var(--darkGray) 100%
   );
 
   /* Sizes */
@@ -144,10 +165,6 @@
   animation: bounce 3s infinite;
 }
 
-[data-aos="fade-right"].aos-animate {
-  transform: translateX(500px); /* Adjust as needed */
-}
-
 /* .............................. BASE .............................. */
 @media (min-width: 0px) {
   * {
@@ -160,6 +177,7 @@
     font-size: var(--md);
     color: var(--skyBlue);
     overflow-x: hidden;
+    background: var(--darkGray);
   }
 
   body {
@@ -170,7 +188,7 @@
     font-family: "Comme", sans-serif;
     text-shadow: var(--subtleTextShadow);
     font-weight: 400;
-    background: var(--darkGray);
+    background: var(--pinkGrayGrad);
     text-shadow: var(--lightTextShadow);
     color: var(--darkGray);
     position: relative;
@@ -223,9 +241,11 @@
     gap: var(--xxl);
     padding: var(--md);
     border-radius: 10px;
-    background: var(--lightToSkyBlueGrad);
+    background: var(--darkGray75);
     box-shadow: var(--mainShadow);
     position: relative;
+    color: var(--lightGray);
+    text-shadow: var(--largeTextShadow);
   }
 
   .HStack {
@@ -235,6 +255,14 @@
     align-items: center;
     width: 100%;
     gap: var(--sm);
+  }
+
+  .heading {
+    font-size: var(--xxxl);
+    font-weight: 500;
+    font-family: "Comme", sans-serif;
+    color: var(--lightGray);
+    text-shadow: var(--largeTextShadow);
   }
 
   .example {
@@ -248,17 +276,17 @@
     gap: var(--xl);
     padding: var(--md);
     border-radius: 10px;
-    background: var(--vibrantPurpleGradCalm);
-    box-shadow: var(--mainShadow);
+    background: var(--darkGray50);
+    box-shadow: var(--largeShadow);
     justify-content: space-between;
   }
 
   .example p {
     font-size: var(--lg);
     font-family: monospace;
-    background: var(--darkGray);
-    color: var(--lightPurple);
-    text-shadow: var(--largeTextShadow);
+    background: var(--lightGray);
+    color: var(--darkGray);
+    text-shadow: 1px 1px 1px black;
     padding: var(--sm);
     border-radius: var(--xxs);
   }
