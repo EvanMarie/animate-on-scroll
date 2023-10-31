@@ -2,6 +2,8 @@
 
 Animate your website's elements with style! This library builds upon the foundation of the popular Animate-on-Scroll (AOS) library but adds an extra layer of flair, customization, and detailed guidance.
 
+[Check it out here!](https://evanmarie.github.io/animate-on-scroll/)
+
 ![animatescroll3](http://www.evanmarie.com/content/images/2023/10/animatescroll3.png)
 
 ![animatescroll4](http://www.evanmarie.com/content/images/2023/10/animatescroll4.png)
